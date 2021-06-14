@@ -1,6 +1,6 @@
 using System;
 
-namespace SafesWebMvc.Models {
+namespace SafesWebMvc.Models.ViewModels {
     public class ErrorViewModel {
         public string RequestId { get; set; }
 
