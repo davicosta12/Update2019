@@ -31,8 +31,9 @@ namespace SafesWebMvc {
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddDbContext<SafesWebMvcContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("SafesWebMvcContext")));
+            services.AddDbContext<SafesWebMvcContext>(options =>
+                    options.UseMySql(Configuration.GetConnectionString("SafesWebMvcContext"), builder =>
+        builder.MigrationsAssembly("SafesWebMvc")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
