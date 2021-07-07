@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SafesWebMvc.Data;
+using SafesWebMvc.Services;
 
 namespace SafesWebMvc {
     public class Startup {
@@ -35,6 +36,7 @@ namespace SafesWebMvc {
         builder.MigrationsAssembly("SafesWebMvc")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
